@@ -17,23 +17,23 @@
  *
  * Load gulp plugins and assing them semantic names.
  */
-	var gulp     = require('gulp'), // Gulp of-course
+	var gulp     = require('gulp'); // Gulp of-course
 
 	// CSS related plugins.
-	sass         = require('gulp-sass'), // Gulp pluign for Sass compilation
-	autoprefixer = require('gulp-autoprefixer'), // Autoprefixing magic
-	minifycss    = require('gulp-uglifycss'), // Minifies CSS files
-	cmq          = require('gulp-combine-media-queries'), // Combines media queries
+	var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation
+	var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
+	var minifycss    = require('gulp-uglifycss'); // Minifies CSS files
+	var cmq          = require('gulp-combine-media-queries'), // Combines media queries
 
 	// JS related plugins.
-	concat       = require('gulp-concat'), // Concatenates JS files
-	uglify       = require('gulp-uglify'), // Minifies JS files
+	var concat       = require('gulp-concat'); // Concatenates JS files
+	var uglify       = require('gulp-uglify'); // Minifies JS files
 
 	// Utility related plugins.
-	filter       = require('gulp-filter'), // To filter diferent file types E.g. *.css
-	rename       = require('gulp-rename'), // Renames files E.g. style.css -> style.min.css
-	sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
-	notify       = require('gulp-notify'), // Sends message notification to you
+	var filter       = require('gulp-filter'); // To filter diferent file types E.g. *.css
+	var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
+	var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
+	var notify       = require('gulp-notify'); // Sends message notification to you
 
 /**
  * Configuration.
@@ -41,23 +41,19 @@
  * Project Configuration for gulp tasks.
  */
 
-	var project         = 'WPGulpTheme',
-	source              = './assets/'
+	var project             = 'WPGulpTheme';
+	var source              = './assets/';
 
-	styleSRC            = './assets/css/style.scss',
-	styleDestination    = './'
+	var styleSRC            = './assets/css/style.scss';
+	var styleDestination    = './';
 
-	jsVendorSRC         = './assets/js/vendors/*.js',
-	jsVendorDestination = './assets/js/'
-	jsVendorFile        = 'vendors'
+	var jsVendorSRC         = './assets/js/vendors/*.js';
+	var jsVendorDestination = './assets/js/';
+	var jsVendorFile        = 'vendors';
 
-	jsCustomSRC         = './assets/js/custom/*.js',
-	jsCustomDestination = './assets/js/'
-	jsCustomFile        = 'cutom'
-
-
-
-	assets           = './assets/', 	// Your main project assets folders
+	var jsCustomSRC         = './assets/js/custom/*.js';
+	var jsCustomDestination = './assets/js/';
+	var jsCustomFile        = 'cutom';
 
 
 /**
