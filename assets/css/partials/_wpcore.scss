@@ -1,7 +1,6 @@
-/*------------------------------------*\
-    WORDPRESS CORE
-\*------------------------------------*/
-
+/* ----------------------------------------------------------------------------
+ * WordPress Core Styles
+ * ------------------------------------------------------------------------- */
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -86,7 +85,9 @@ a img.aligncenter {
     background: inherit;
 }
 
-/* calendar widget */
+/* ----------------------------------------------------------------------------
+ * Calendar widget
+ * ------------------------------------------------------------------------- */
 .widget_calendar {display: table;width: 100%;}
 #wp-calendar {width: 100%; }
 #wp-calendar caption { text-align: right; color: $b; font-size: 12px; margin-top: 10px; margin-bottom: 15px; }
