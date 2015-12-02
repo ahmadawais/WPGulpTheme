@@ -23,7 +23,7 @@
 	var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation
 	var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
 	var minifycss    = require('gulp-uglifycss'); // Minifies CSS files
-	var cmq          = require('gulp-combine-media-queries'), // Combines media queries
+	var cmq          = require('gulp-combine-media-queries'); // Combines media queries
 
 	// JS related plugins.
 	var concat       = require('gulp-concat'); // Concatenates JS files
