@@ -1,0 +1,21 @@
+/**
+ * Base SCSS
+ */
+
+.wrap{
+	display: table;
+	width: 100%;
+	height: 100%;
+	padding: 2vh;
+	background: $b;
+	color: $w;
+	font-size: 5vh;
+}
+
+.content{
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: center;
+}

@@ -1,3 +1,12 @@
+<?php
+/**
+ * Index File
+ */
+
+get_header();
+
+?>
+
 <div class="wrap">
 	<div class="content">
 		<h1>WP Gulp Boilerplate!</h1>
@@ -6,3 +15,7 @@
 	<!-- /.content -->
 </div>
 <!-- /.wrap -->
+
+
+
+<?php get_footer(); ?>

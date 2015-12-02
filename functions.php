@@ -85,36 +85,77 @@ add_action( 'after_setup_theme', 'neat_setup' );
  *
  * @since 1.0.0
  */
-if (file_exists(dirname(__FILE__).'/assets/functions/aa_scripts_styles.php')) {
-    require_once( dirname(__FILE__).'/assets/functions/aa_scripts_styles.php' );
+
+/**
+ *
+ * Scripts: Frontend with no conditions, Add Custom Scripts to wp_head
+ *
+ * @since  1.0.0
+ *
+ */
+add_action('wp_enqueue_scripts', 'aa_scripts');
+function aa_scripts()
+{
+    if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+
+
+    	wp_enqueue_script('jquery'); // Enqueue it!
+        //wp_deregister_script('jquery'); // Deregister WordPress jQuery
+        //wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', array(), '1.11.2');
+
+
+        /**
+         *
+         * Minified and concatenated scripts
+         *
+         *     @vendors     plugins.min,js
+         *     @custom      scripts.min.js
+         *
+         *     Order is important
+         *
+         */
+        wp_register_script('aa_vendorsJs', get_template_directory_uri() . '/assets/js/vendors.min.js'); // Custom scripts
+        wp_enqueue_script('aa_vendorsJs'); // Enqueue it!
+
+        wp_register_script('aa_customJs', get_template_directory_uri() . '/assets/js/custom.min.js'); // Custom scripts
+        wp_enqueue_script('aa_customJs'); // Enqueue it!
+
+    }
+
 }
 
 
 /**
- * Widgets
  *
- * @since 1.0.0
+ * Styles: Frontend with no conditions, Add Custom styles to wp_head
+ *
+ * @since  1.0
+ *
  */
-if (file_exists(dirname(__FILE__).'/assets/functions/aa_widgets.php')) {
-    require_once( dirname(__FILE__).'/assets/functions/aa_widgets.php' );
+add_action('wp_enqueue_scripts', 'aa_styles'); // Add Theme Stylesheet
+function aa_styles()
+{
+
+    /**
+     *
+     * Minified and Concatenated styles
+     *
+     */
+    wp_register_style('aa_style', get_template_directory_uri() . '/style.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('aa_style'); // Enqueue it!
+
 }
 
-
 /**
- * Extras: Custom functions that act independently of the theme templates.
  *
- * @since 1.0.0
- */
-if (file_exists(dirname(__FILE__).'/assets/functions/aa_extras.php')) {
-    require_once( dirname(__FILE__).'/assets/functions/aa_extras.php' );
-}
-
-
-/**
- * Template Functions for this theme.
+ * Comment Reply js to load only when thread_comments is active
  *
- * @since 1.0.0
+ * @since  1.0.0
+ *
  */
-if (file_exists(dirname(__FILE__).'/assets/functions/aa_template_functions.php')) {
-    require_once( dirname(__FILE__).'/assets/functions/aa_template_functions.php' );
+add_action( 'wp_enqueue_scripts', 'aa_enqueue_comments_reply' );
+function aa_enqueue_comments_reply() {
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
