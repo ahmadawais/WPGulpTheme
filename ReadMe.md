@@ -9,6 +9,12 @@ A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 ##Can You Build Just What's Needed?
 Sure! Here you go, it's called [WPGulp](https://github.com/ahmadawais/WPGulp)
 
+##Prerequisite & Gotchas
+- Tested and built on Mac OS Yosemite.
+- You must have Git and Node, NPM, Gulp installed globally. 
+- You should never commit `node_modules` folder, you should exclude it in `.gitignore` file.
+
+
 ##To do 
 - [x] Add base files
 - [ ] Add more info
