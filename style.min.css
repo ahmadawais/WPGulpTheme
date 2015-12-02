@@ -123,5 +123,7 @@ a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
 }@media(min-width:768px){.wp-caption .wp-caption-text,.gallery-caption{font:300 1.9rem/1.7 sans-serif}
 }@media(min-width:1024px){.wp-caption .wp-caption-text,.gallery-caption{font:300 2rem/3.1rem sans-serif}
 }@media(min-width:1280px){.wp-caption .wp-caption-text,.gallery-caption{font:300 2rem/3.1rem sans-serif}
-}.wrap{display:table;width:100%;height:100%;font-size:5vh;padding:2vh;background:#000;color:#fff}
+}.wrap{display:table;width:100%;height:100%;font-size:5vh;padding:2vh;background:#ed4846;color:#fff}
 .content{display:table-cell;width:100%;vertical-align:middle;margin:0 auto;text-align:center}
+.content h1,.content p{font-family:Lato;font-weight:100}
+.content h1{text-transform:uppercase}

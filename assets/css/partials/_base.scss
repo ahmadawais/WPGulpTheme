@@ -9,7 +9,7 @@
 	font-size: 5vh;
 	padding: 2vh;
 
-	background: $b;
+	background: $color--primary;
 	color: $w;
 }
 
@@ -19,4 +19,14 @@
 	vertical-align: middle;
 	margin: 0 auto;
 	text-align: center;
+
+	h1,
+	p{
+		font-family: Lato;
+		font-weight: 100;
+	}
+
+	h1{
+		text-transform: uppercase;
+	}
 }

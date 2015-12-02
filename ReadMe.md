@@ -1,5 +1,6 @@
 #WPGulpTheme
 A theme to demonstrate simplest implementation of WPGulp Boilerplate.
+![WPGulpTheme](https://i.imgur.com/DzCCnKz.png)
 
 ##How?
 - Configure the project paths in gulpfile.js (Line #23 t0 #38)
