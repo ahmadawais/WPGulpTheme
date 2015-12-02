@@ -361,7 +361,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 /* Base */
 /** Base SCSS */
-.wrap { display: table; width: 100%; height: 100%; font-size: 5vh; padding: 2vh; background: #ED4846; color: #ffffff; }
+.wrap { display: table; width: 100%; height: 100%; font-size: 5vh; padding: 3vh; background: #ED4846; color: #ffffff; }
 
 .content { display: table-cell; width: 100%; vertical-align: middle; margin: 0 auto; text-align: center; }
 
