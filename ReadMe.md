@@ -26,6 +26,8 @@ A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 - Live browser reload with [BrowserSync](https://github.com/ahmadawais/WPGulpTheme/tree/BrowserSync)
 - Images minification with [Imagemin](https://github.com/ahmadawais/WPGulpTheme/tree/Images)
 
+
+##License
 The MIT License (MIT)
 Copyright (c) 2016 ahmadawais <ahmadawais.com>
 
