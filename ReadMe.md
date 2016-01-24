@@ -2,6 +2,11 @@
 A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 ![WPGulpTheme](https://i.imgur.com/DzCCnKz.png)
 
+## What Can [WPGulp](https://github.com/ahmadawais/WPGulp) Do?
+ 1. Sass to CSS conversion
+ 2. JS concatenation
+ 3. Watch files
+ 4. Live reloads browser with BrowserSync
 
 ##Getting Started ?
 - Configure the project paths in gulpfile.js (Line #23 to #47)
