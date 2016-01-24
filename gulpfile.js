@@ -7,6 +7,7 @@
  * 			1. Sass to CSS conversion
  * 			2. JS concatenation
  * 			3. Watch files
+ * 			4. Live reloads browser with BrowserSync
  *
  * @since 1.0.0
  * @author Ahmad Awais (@mrahmadawais)
@@ -104,15 +105,15 @@ var reload      = browserSync.reload; // For manual browser reload.
  		// Project URL.
  		proxy: projecturl,
 
+ 		// Stop the browser from automatically opening.
+ 		open: false,
+
  		// Inject CSS changes.
  		// Commnet it to reload browser for every CSS change.
- 		injectChanges: true,
+ 		// injectChanges: true,
 
  		// Use a specific port (instead of the one auto-detected by Browsersync).
  		// port: 7000,
-
- 		// Stop the browser from automatically opening
- 		// open: false,
 
  	} );
  });
