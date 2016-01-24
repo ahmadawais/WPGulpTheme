@@ -15,8 +15,11 @@ Sure! Here you go, it's called [WPGulp](https://github.com/ahmadawais/WPGulp)
 - You must have Git and Node, NPM, Gulp installed globally. 
 - You should never commit `node_modules` folder, you should exclude it in `.gitignore` file.
 
+##Task Branches
+- BrowserSync 
+
 
 ##To do 
 - [x] Add base files
-- [ ] Add more info
-- [ ] Add links
+- [x] Add BrowserSync
+- [ ] Add images task

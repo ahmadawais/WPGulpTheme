@@ -22,7 +22,6 @@
 
 var project             = 'WPGulpTheme'; // Project Name.
 var projecturl          = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
-var tunnelname          = project.toLowerCase(); // Ignorable/Optional: tunnel name is lowercase of project if you choose to use it.
 
 
 var styleSRC            = './assets/css/style.scss'; // Path to main .scss file
@@ -91,40 +90,29 @@ var reload      = browserSync.reload; // For manual browser reload.
  * Live Reloads, CSS injections, Localhost tunneling.
  *
  * This task does the following:
- * 		1.
+ * 		1. Sets the project URL
+ * 		2. Sets inject CSS
+ * 		3. You may define a custom port
+ * 		4. You may want to stop the browser from openning automatically
  */
  gulp.task( 'browser-sync', function() {
-
-
-
  	browserSync.init( {
 
- 		// Read here http://www.browsersync.io/docs/options/
+ 		// For more options
+ 		// @link http://www.browsersync.io/docs/options/
+
+ 		// Project URL.
  		proxy: projecturl,
 
- 		// Use a specific port (instead of the one auto-detected by Browsersync).
- 		// port: 3000,
-
- 		// Tunnel the Browsersync server through a random Public URL
- 		// E.g. http://randomstring23232.localtunnel.me
- 		tunnel: true,
-
- 		// Attempt to use the URL "http://project.localtunnel.me"
- 		// It uses the project name in lowercase.
- 		// This can be a cusotm subdomain
- 		// E.g. "tunnel: myname," will be "http://myname.localtunnel.me"
- 		tunnel: tunnelname,
-
-
- 		// Inject CSS changes
+ 		// Inject CSS changes.
+ 		// Commnet it to reload browser for every CSS change.
  		injectChanges: true,
 
- 		// Log information about changed files
- 		// logFileChanges: true,
+ 		// Use a specific port (instead of the one auto-detected by Browsersync).
+ 		// port: 7000,
 
  		// Stop the browser from automatically opening
  		// open: false,
-
 
  	} );
  });
