@@ -2,8 +2,9 @@
 A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 ![WPGulpTheme](https://i.imgur.com/DzCCnKz.png)
 
-##How?
-- Configure the project paths in gulpfile.js (Line #23 t0 #38)
+
+##Getting Started ?
+- Configure the project paths in gulpfile.js (Line #23 to #47)
 - Open the project folder in the terminal and type `sudo npm install`  wait for the files to get downloaded. It will take about 2 minutes to add a node_modules folder inside your project.
 - Once the download is complete type `gulp` and boom!
 
