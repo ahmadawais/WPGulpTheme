@@ -19,6 +19,7 @@ $y			: #FFFDD2;
 /* ----------------------------------------------------------------------------
  * Primary Color Variants
  * ------------------------------------------------------------------------- */
+
  /*$color--primary: #406de4;*/
  /*$color--primary: #00BCD4;*/
  /*$color--primary: #03A9F4;*/
@@ -26,7 +27,7 @@ $y			: #FFFDD2;
  /*$color--primary: #2980b9;*/
  /*$color--primary: #3F51B5;*/
  /*$color--primary: #304FFE;*/
- /*$color--primary: #FF5722;*/
+ $color--primary: #FF5722;
  /*$color--primary: #795548;*/
  /*$color--primary: #2ecc71;*/
  /*$color--primary: #27ae60;*/
@@ -46,7 +47,7 @@ $y			: #FFFDD2;
  /*$color--primary: #e74c3c;*/
  /*$color--primary: #c0392b;*/
  /*$color--primary: #f44336;*/
- $color--primary: #ED4846;
+ /*$color--primary: #ED4846;*/
  /*$color--primary: #7f8c8d;*/
  /*$color--primary: #34495e;*/
  /*$color--primary: #607D8B;*/
