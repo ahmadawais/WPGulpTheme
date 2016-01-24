@@ -2,19 +2,20 @@
 A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 ![WPGulpTheme](https://i.imgur.com/DzCCnKz.png)
 
+
 ## What Can [WPGulp](https://github.com/ahmadawais/WPGulp) Do?
- 1. Sass to CSS conversion
- 2. JS concatenation
- 3. Watch files
- 4. Live reloads browser with BrowserSync
+ 1. Live reloads browser with BrowserSync
+ 2. CSS: Sass to CSS conversion, Autoprixing, Sourcemaps, CSS minification.
+ 3. JS: Concatenates & uglifies Vendor and Custom JS files.
+ 4. Images: Minifies PNG, JPEG, GIF and SVG images.
+ 5. Watches files for changes in CSS or JS
+
 
 ##Getting Started ?
 - Configure the project paths in gulpfile.js (Line #23 to #47)
 - Open the project folder in the terminal and type `sudo npm install`  wait for the files to get downloaded. It will take about 2 minutes to add a node_modules folder inside your project.
 - Once the download is complete type `gulp` and boom!
 
-##Can You Build Just What's Needed?
-Sure! Here you go, it's called [WPGulp](https://github.com/ahmadawais/WPGulp)
 
 ##Prerequisite & Gotchas
 - Tested and built on Mac OS Yosemite.
@@ -23,6 +24,7 @@ Sure! Here you go, it's called [WPGulp](https://github.com/ahmadawais/WPGulp)
 
 ##Task Branches
 - Live browser reload with [BrowserSync](https://github.com/ahmadawais/WPGulpTheme/tree/BrowserSync)
+- Images minification with [Imagemin](https://github.com/ahmadawais/WPGulpTheme/tree/Images)
 
 The MIT License (MIT)
 Copyright (c) 2016 ahmadawais <ahmadawais.com>
