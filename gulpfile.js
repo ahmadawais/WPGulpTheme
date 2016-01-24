@@ -20,7 +20,10 @@
   * Edit the variables as per your project requirements.
   */
 
-var project             = 'WPGulpTheme'; // Name
+var project             = 'WPGulpTheme'; // Project Name.
+var projecturl          = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
+var tunnelname          = project.toLowerCase(); // Ignorable/Optional: tunnel name is lowercase of project if you choose to use it.
+
 
 var styleSRC            = './assets/css/style.scss'; // Path to main .scss file
 var styleDestination    = './'; // Path to place the compiled CSS file
@@ -38,6 +41,7 @@ var jsCustomDestination = './assets/js/'; // Path to place the compiled JS custo
 var jsCustomFile        = 'custom'; // Compiled JS custom file name
 // Default set to custom i.e. custom.js
 
+// Watch files paths.
 var styleWatchFiles     = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them
 var vendorJSWatchFiles  = './assets/js/vendors/*.js'; // Path to all vendors JS files
 var customJSWatchFiles  = './assets/js/custom/*.js'; // Path to all custom JS files
@@ -52,17 +56,78 @@ var gulp         = require('gulp'); // Gulp of-course
 
 // CSS related plugins.
 var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation
-var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
 var minifycss    = require('gulp-uglifycss'); // Minifies CSS files
+var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
+const AUTOPREFIXER_BROWSERS = [
+    'last 2 version',
+    '> 1%',
+    'ie >= 9',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4',
+    'bb >= 10'
+  ]; // Browsers you care about for autoprefixing. Browserlist https://github.com/ai/browserslist
+
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
 var uglify       = require('gulp-uglify'); // Minifies JS files
 
 // Utility related plugins.
-var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
-var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
-var notify       = require('gulp-notify'); // Sends message notification to you
+var rename      = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
+var sourcemaps  = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
+var notify      = require('gulp-notify'); // Sends message notification to you
+var browserSync = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
+var reload      = browserSync.reload; // For manual browser reload.
+
+
+/**
+ * Task: `browser-sync`.
+ *
+ * Live Reloads, CSS injections, Localhost tunneling.
+ *
+ * This task does the following:
+ * 		1.
+ */
+ gulp.task( 'browser-sync', function() {
+
+
+
+ 	browserSync.init( {
+
+ 		// Read here http://www.browsersync.io/docs/options/
+ 		proxy: projecturl,
+
+ 		// Use a specific port (instead of the one auto-detected by Browsersync).
+ 		// port: 3000,
+
+ 		// Tunnel the Browsersync server through a random Public URL
+ 		// E.g. http://randomstring23232.localtunnel.me
+ 		tunnel: true,
+
+ 		// Attempt to use the URL "http://project.localtunnel.me"
+ 		// It uses the project name in lowercase.
+ 		// This can be a cusotm subdomain
+ 		// E.g. "tunnel: myname," will be "http://myname.localtunnel.me"
+ 		tunnel: tunnelname,
+
+
+ 		// Inject CSS changes
+ 		injectChanges: true,
+
+ 		// Log information about changed files
+ 		// logFileChanges: true,
+
+ 		// Stop the browser from automatically opening
+ 		// open: false,
+
+
+ 	} );
+ });
 
 
 /**
@@ -77,6 +142,7 @@ var notify       = require('gulp-notify'); // Sends message notification to you
  * 		4. Autoprefixes it and generates style.css
  * 		5. Renames the CSS file with suffix .min.css
  * 		6. Minifies the CSS file and generates style.min.css
+ * 		7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task('styles', function () {
  	gulp.src( styleSRC )
@@ -91,15 +157,7 @@ gulp.task('styles', function () {
 		} ) )
 		.pipe( sourcemaps.write( { includeContent: false } ) )
 		.pipe( sourcemaps.init( { loadMaps: true } ) )
-		.pipe( autoprefixer(
-			'last 2 version',
-			'> 1%',
-			'safari 5',
-			'ie 8',
-			'ie 9',
-			'opera 12.1',
-			'ios 6',
-			'android 4' ) )
+		.pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
 		.pipe( sourcemaps.write ( styleDestination ) )
 		.pipe( gulp.dest( styleDestination ) )
@@ -110,6 +168,7 @@ gulp.task('styles', function () {
 			maxLineLen: 10
 		}))
 		.pipe( gulp.dest( styleDestination ) )
+		.pipe( browserSync.stream() )
 		.pipe( notify( { message: 'TASK: "styles" Completed!', onLast: true } ) )
 });
 
@@ -169,8 +228,8 @@ gulp.task( 'customJS', function() {
   * Watches for file changes and runs specific tasks.
   */
 
- gulp.task( 'default', [ 'styles', 'vendorsJs', 'customJS' ], function () {
+ gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'browser-sync'], function () {
  	gulp.watch( styleWatchFiles, [ 'styles' ] );
- 	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs' ] );
- 	gulp.watch( customJSWatchFiles, [ 'customJS' ] );
+ 	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  );
+ 	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  );
  });
