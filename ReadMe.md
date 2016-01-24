@@ -16,7 +16,7 @@ Sure! Here you go, it's called [WPGulp](https://github.com/ahmadawais/WPGulp)
 - You should never commit `node_modules` folder, you should exclude it in `.gitignore` file.
 
 ##Task Branches
-- BrowserSync 
+- Live browser reload with [BrowserSync](https://github.com/ahmadawais/WPGulpTheme/tree/BrowserSync)
 
 
 ##To do 
