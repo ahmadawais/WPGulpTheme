@@ -6,19 +6,13 @@
  */
 
 /**
- *
  * Paths
  *
  * @since  1.0
- *
  */
 if ( !defined( 'AA_THEME_DIR' ) ){
     define('AA_THEME_DIR', ABSPATH . 'wp-content/themes/' . get_template());
 }
-
-
-
-
 
 /**
  * Set the content width based on the theme's design and stylesheet.
