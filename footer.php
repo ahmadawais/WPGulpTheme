@@ -8,5 +8,11 @@
 
 <?php wp_footer(); ?>
 
+
+<?php /**
+ * REMEMBER TO PUT BROWSERSYNC SCRIPT FOR BROWSER REFRESH
+ */
+?>
+
 </body>
 </html>

@@ -49,6 +49,7 @@ var styleDestination        = './'; // Path to place the compiled CSS file.
 
 // JS Vendor related.
 var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
+var jsVendorSrcFiles        = []; // Paths to single vendor js files (es: from Bower components)
 var jsVendorDestination     = './assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
@@ -118,6 +119,7 @@ var browserSync  = require('browser-sync').create(); // Reloads browser and inje
 var reload       = browserSync.reload; // For manual browser reload.
 var wpPot        = require('gulp-wp-pot'); // For generating the .pot file.
 var sort         = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
+var gulpMerge    = require('gulp-merge');
 
 /**
  * Task: `browser-sync`.
@@ -195,7 +197,7 @@ gulp.task( 'browser-sync', function() {
 
     .pipe( rename( { suffix: '.min' } ) )
     .pipe( minifycss( {
-      maxLineLen: 10
+      maxLineLen: 80
     }))
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
@@ -218,8 +220,10 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
  gulp.task( 'vendorsJs', function() {
-  gulp.src( jsVendorSRC )
-    .pipe( concat( jsVendorFile + '.js' ) )
+   gulpMerge(
+     gulp.src( jsVendorSRC ),
+     gulp.src( jsVendorSrcFiles )
+   ).pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
     .pipe( rename( {
