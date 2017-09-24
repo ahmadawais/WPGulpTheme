@@ -37,7 +37,7 @@ Thumbs.db
 
 # Composer #
 ##########
-vendors/composer/
+vendor/composer/
 !assets/js/vendor/
 wpcs/
 composer.lock
@@ -63,7 +63,7 @@ node_modules
 
 # PhpStrom Project Files #
 .idea/
-library/vendors/composer
+library/vendor/composer
 assets/img/.DS_Store
 assets/sass/HTML
 assets/sass/Rails

@@ -1,8 +1,17 @@
 <?php
 /**
- * The header for our theme.
+ * Theme Header
  *
+ * Header data.
+ *
+ * @since   1.0.0
+ * @package WP
  */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

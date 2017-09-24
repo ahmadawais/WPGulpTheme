@@ -1,8 +1,8 @@
 /**
- * Vendor JS 2.
+ * Vendor JS 2
  *
  * A vendor JS script.
  *
  * @since 1.0.0
  */
-console.log('VendorJS2');
+console.log( 'VendorJS2' );

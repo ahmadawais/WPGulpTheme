@@ -30,22 +30,22 @@
 // START Editing Project Variables.
 // Project related.
 var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
+var projectURL              = 'local.dev'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
 var text_domain             = 'WPGULP'; // Your textdomain here.
-var destFile                = 'WPGULP.pot'; // Name of the transalation file.
+var translationFile         = 'WPGULP.pot'; // Name of the transalation file.
+var translationDestination  = './languages' // Where to save the translation files.
 var packageName             = 'WPGULP'; // Package name.
 var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
 var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
 var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID.
-var translatePath           = './languages' // Where to save the translation files.
 
 // Style related.
 var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
 var styleDestination        = './'; // Path to place the compiled CSS file.
-// Defualt set to root folder.
+// Default set to root folder.
 
 // JS Vendor related.
 var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
@@ -91,7 +91,7 @@ const AUTOPREFIXER_BROWSERS = [
 /**
  * Load Plugins.
  *
- * Load gulp plugins and assing them semantic names.
+ * Load gulp plugins and passing them semantic names.
  */
 var gulp         = require('gulp'); // Gulp of-course
 
@@ -174,7 +174,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( sass( {
       errLogToConsole: true,
       outputStyle: 'compact',
-      //outputStyle: 'compressed',
+      // outputStyle: 'compressed',
       // outputStyle: 'nested',
       // outputStyle: 'expanded',
       precision: 10
@@ -300,13 +300,13 @@ gulp.task( 'browser-sync', function() {
          .pipe(sort())
          .pipe(wpPot( {
              domain        : text_domain,
-             destFile      : destFile,
+             destFile      : translationFile,
              package       : packageName,
              bugReport     : bugReport,
              lastTranslator: lastTranslator,
              team          : team
          } ))
-        .pipe(gulp.dest(translatePath))
+        .pipe(gulp.dest(translationDestination))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });

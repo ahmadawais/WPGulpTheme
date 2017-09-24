@@ -58,7 +58,7 @@ textarea{overflow:auto}
 ::before,::after{text-decoration:inherit;vertical-align:inherit}
 *,::before,::after{border-style:solid;border-width:0}
 *{margin:0;padding:0}
-:root{box-sizing:border-box;cursor:default;font:16px / 1.5 sans-serif;text-rendering:optimizeLegibility}
+:root{box-sizing:border-box;cursor:default;font:16px/1.5 sans-serif;text-rendering:optimizeLegibility}
 html{background-color:#fff}
 a{text-decoration:none}
 audio,canvas,iframe,img,svg,video{vertical-align:middle}

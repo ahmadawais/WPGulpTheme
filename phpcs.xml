@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards — Custom Ruleset">
+	<description>A custom set of rules to check for a WPized WordPress project</description>
+
+	<arg name="extensions" value="php"/>
+
+	<!-- Show sniff codes in all reports -->
+	<arg value="s"/>
+
+	<!-- Use colors in output -->
+	<arg name="colors" />
+
+	<!-- Show Progress -->
+	<arg value="p"/>
+
+	<!-- Allow invoking just `phpcs` on command line without assuming STDIN for file input. -->
+	<file>.</file>
+
+	<!-- Exclude select folders and files from being checked. -->
+	<exclude-pattern>*/dev-lib/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<!-- <exclude-pattern>/docroot/wp-admin/*</exclude-pattern> -->
+	<!-- <exclude-pattern>/docroot/wp-includes/*</exclude-pattern> -->
+	<!-- <exclude-pattern>/docroot/wp-*.php</exclude-pattern> -->
+	<!-- <exclude-pattern>/docroot/index.php</exclude-pattern> -->
+	<!-- <exclude-pattern>/docroot/xmlrpc.php</exclude-pattern> -->
+	<!-- <exclude-pattern>/docroot/wp-content/plugins/*</exclude-pattern> -->
+	<!-- <exclude-pattern>*.twig</exclude-pattern> -->
+
+	<!-- My Old Custom -->
+	<rule ref="WordPress">
+		<!-- <exclude name="Generic.Files.LineLength"/> -->
+		<!-- <exclude name="Generic.WhiteSpace.ScopeIndent"/> -->
+		<!-- <exclude name="Generic.WhiteSpace.DisallowSpaceIndent"/> -->
+		<!-- <exclude name="Generic.WhiteSpace.DisallowTabIndent"/> -->
+		<!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis"/> -->
+		<!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis"/> -->
+		<!-- <exclude name="WordPress.Arrays.ArrayDeclaration"/> -->
+		<!-- <exclude name="WordPress.XSS.EscapeOutput"/> -->
+		<!-- <exclude name="WordPress.Arrays.ArrayKeySpacingRestrictions"/> -->
+		<!-- <exclude name="WordPress.WhiteSpace.CastStructureSpacing"/> -->
+		<!-- <exclude name="PEAR.Functions.FunctionCallSignature.Indent"/> -->
+		<!-- <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket"/> -->
+		<!-- <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/> -->
+		<exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed"/>
+	</rule>
+
+	<!-- Let's also check that everything is properly Coded with Core Standards. -->
+	<rule ref="WordPress-Core" />
+
+	<!-- Let's also check that everything is properly documented. -->
+	<rule ref="WordPress-Docs"/>
+
+	<!-- Include the WordPress-Extra standard. -->
+	<rule ref="WordPress-Extra">
+		<!--
+		We may want a middle ground though. The best way to do this is add the
+		entire ruleset, then rule by rule, remove ones that don't suit a project.
+		We can do this by running `phpcs` with the '-s' flag, which allows us to
+		see the names of the sniffs reporting errors.
+		Once we know the sniff names, we can opt to exclude sniffs which don't
+		suit our project like so.
+		-->
+
+		<!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing"/> -->
+		<!-- <exclude name="WordPress.XSS.EscapeOutput"/> -->
+	</rule>
+
+	<!-- Add in some extra rules from other standards. -->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
+
+	<!-- Do not require docblocks for unit tests -->
+	<rule ref="Squiz.Commenting.FunctionComment.Missing">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FileComment.Missing">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.ClassComment.SpacingAfter">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Commenting.DocComment.MissingShort">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.VariableComment.Missing">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FunctionCommentThrowTag.Missing">
+		<exclude-pattern>phpunit/*</exclude-pattern>
+	</rule>
+
+
+	<!-- Check for PHP cross-version compatibility. -->
+	<!--
+		To enable this, the PHPCompatibility standard needs
+		to be installed.
+		See the readme for installation instructions:
+		https://github.com/wimg/PHPCompatibility
+	-->
+	<!--
+	<config name="testVersion" value="5.2-99.0"/>
+	<rule ref="PHPCompatibility"/>
+	-->
+
+	<!--
+		To get the optimal benefits of using WPCS, we should add a couple of
+		custom properties.
+
+		Adjust the values of these properties to fit our needs.
+
+		For information on additional custom properties available, check out
+		the wiki:
+		https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/wiki/Customizable-sniff-properties
+	-->
+	<!-- <rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="my-textdomain,library-textdomain"/>
+		</properties>
+	</rule> -->
+
+   <!--  <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array" value="my_prefix"/>
+		</properties>
+	</rule> -->
+
+	<rule ref="WordPress.WP.DeprecatedClasses">
+		<properties>
+			<property name="minimum_supported_version" value="4.5"/>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.DeprecatedFunctions">
+		<properties>
+			<property name="minimum_supported_version" value="4.5"/>
+		</properties>
+	</rule>
+
+</ruleset>
