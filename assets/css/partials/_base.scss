@@ -7,7 +7,6 @@
 	height: 100%;
 	font-size: 5vh;
 	padding: 3vh;
-
 	background: $color--primary;
 	color: $w;
 }
@@ -19,8 +18,7 @@
 	margin: 0 auto;
 	text-align: center;
 
-	h1,
-	p{
+	h1, p{
 		font-family: Lato;
 		font-weight: 100;
 		@include r(240)  { font-weight: 100; }
@@ -35,11 +33,11 @@
 	h1{
 		text-transform: uppercase;
 		@include r(240)  { text-transform: uppercase; }
-	    @include r(320)  { text-transform: uppercase; }
-	    @include r(480)  { text-transform: uppercase; }
-	    @include r(768)  { text-transform: uppercase; }
-	    @include r(1024) { text-transform: uppercase; }
-	    @include r(1280) { text-transform: uppercase; }
+	    	@include r(320)  { text-transform: uppercase; }
+	    	@include r(480)  { text-transform: uppercase; }
+	    	@include r(768)  { text-transform: uppercase; }
+	    	@include r(1024) { text-transform: uppercase; }
+	    	@include r(1280) { text-transform: uppercase; }
 
 	}
 }
