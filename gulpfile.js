@@ -30,13 +30,13 @@
 // START Editing Project Variables.
 // Project related.
 var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'local.dev'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
+var projectURL              = 'wpgulp.dev'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
 var text_domain             = 'WPGULP'; // Your textdomain here.
 var translationFile         = 'WPGULP.pot'; // Name of the transalation file.
-var translationDestination  = './languages' // Where to save the translation files.
+var translationDestination  = './languages'; // Where to save the translation files.
 var packageName             = 'WPGULP'; // Package name.
 var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
 var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
@@ -184,7 +184,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
-    .pipe( sourcemaps.write ( styleDestination ) )
+    .pipe( sourcemaps.write ( './' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
 
@@ -300,13 +300,12 @@ gulp.task( 'browser-sync', function() {
          .pipe(sort())
          .pipe(wpPot( {
              domain        : text_domain,
-             destFile      : translationFile,
              package       : packageName,
              bugReport     : bugReport,
              lastTranslator: lastTranslator,
              team          : team
          } ))
-        .pipe(gulp.dest(translationDestination))
+        .pipe(gulp.dest(translationDestination + '/' + translationFile ))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });
