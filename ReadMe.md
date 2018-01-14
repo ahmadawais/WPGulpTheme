@@ -20,6 +20,8 @@
 </table>
 
 # WP Gulp Theme
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ahmadawais/WPGulpTheme.svg)](https://greenkeeper.io/)
 A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 
 > Make sure you realize that this repository is just an implementation of [WPGulp](https://github.com/ahmadawais/WPGulp. So, you should use [WPGulp](https://github.com/ahmadawais/WPGulp) repository for your production themes and plugins.
