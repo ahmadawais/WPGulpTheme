@@ -6,16 +6,12 @@
 
   <img src="https://i.imgur.com/DzCCnKz.png" alt="WPGulp WordPress Gulp Theme" />
 
-  <h1><code>WordPress Gulp Workflow</code></h1>
+  <h1><code>WordPress Gulp Theme</code></h1>
 
-[![GitHub](https://img.shields.io/wordpress/v/akismet.svg?colorA=D14543&colorB=21759B&maxAge=2592000&style=flat&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
-[![emoji-log](https://img.shields.io/badge/🚀%20Emoji-Log-gray.svg?colorA=D14543&colorB=21759B&style=flat)](https://github.com/ahmadawais/Emoji-Log/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)  [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
+> A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 
 </div>
 
-# WPGulp Theme
-
-A theme to demonstrate simplest implementation of WPGulp Boilerplate.
 
 > ⚠️ Make sure you realize that this repository is just an implementation of [WPGulp](https://github.com/ahmadawais/WPGulp). So, you should use [WPGulp](https://github.com/ahmadawais/WPGulp) repository for your production themes and plugins.
 
