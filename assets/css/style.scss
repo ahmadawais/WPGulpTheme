@@ -1,37 +1,27 @@
-/**!
+/*!
 Theme Name: WPGulpTheme
 Theme URI: https://github.com/ahmadawais/WPGulpTheme
 Description: A theme to demonstrate simplest implementation of WPGulp Boilerplate.
-Version: 1.0.3
-Author: Ahmad Awais, mrahmadawais
-Author URI: http://AhmadAwais.com/
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: gulp, boilerpate
-Text Domain: wpgulp-theme
+Version: 2.2.0
+Author: Ahmad Awais
+Author URI: https://twitter.com/MrAhmadAwais/
+License: MIT
+Text Domain: WPGT
 */
 
-/* ----------------------------------------------------------------------------
- * Mixins & Variables
- * ------------------------------------------------------------------------- */
-@import "partials/mixins";
-@import "partials/variables";
+// Mixins & Variables.
+@import 'partials/mixins';
+@import 'partials/variables';
 
-/* ----------------------------------------------------------------------------
- * Normalize & Santize
- * ------------------------------------------------------------------------- */
-@import "vendor/normalize";
-@import "vendor/sanitize";
+// Normalize & Santize.
+@import 'vendor/normalize';
+@import 'vendor/sanitize';
 
-/* ----------------------------------------------------------------------------
- * Structure
- * ------------------------------------------------------------------------- */
-@import "partials/structure";
+// Structure.
+@import 'partials/structure';
 
-/* WPCore */
-@import "partials/wpcore";
+// WPCore.
+@import 'partials/wpcore';
 
-/* Base */
-@import "partials/base";
-
-
+// Base.
+@import 'partials/base';

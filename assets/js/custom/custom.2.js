@@ -3,4 +3,4 @@
  *
  * @since 1.0.0
  */
-const sum = ( a, b ) => a + b;
+const sub = ( a, b ) => a - b;

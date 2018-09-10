@@ -1,8 +1,6 @@
 /**
- * Vendor JS 2
- *
- * A vendor JS script.
+ * Vendor JavaScript
  *
  * @since 1.0.0
  */
-console.log( 'VendorJS2' );
+const multiply = (a, b) => a * b;

@@ -1,8 +1,20 @@
+"use strict";
+
 /**
- * Custom JS.
- *
- * Custom JS scripts.
+ * Custom JavaScript
  *
  * @since 1.0.0
  */
-console.log( 'CustomJS' );
+var sum = function sum(a, b) {
+  return a + b;
+};
+"use strict";
+
+/**
+ * Custom JavaScript
+ *
+ * @since 1.0.0
+ */
+var sub = function sub(a, b) {
+  return a - b;
+};

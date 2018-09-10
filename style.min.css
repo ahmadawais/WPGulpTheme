@@ -1,4 +1,13 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+/*!
+Theme Name: WPGulpTheme
+Theme URI: https://github.com/ahmadawais/WPGulpTheme
+Description: A theme to demonstrate simplest implementation of WPGulp Boilerplate.
+Version: 2.2.0
+Author: Ahmad Awais
+Author URI: https://twitter.com/MrAhmadAwais/
+License: MIT
+Text Domain: WPGT
+*/html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
@@ -18,7 +27,7 @@ sub{bottom:-0.25em}
 img{border:0}
 svg:not(:root){overflow:hidden}
 figure{margin:1em 40px}
-hr{box-sizing:content-box;height:0}
+hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0}
 pre{overflow:auto}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
@@ -28,17 +37,17 @@ button,html input[type="button"],input[type="reset"],input[type="submit"]{-webki
 button[disabled],html input[disabled]{cursor:default}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 input{line-height:normal}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
-input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
-input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+input[type='checkbox'],input[type='radio']{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}
+input[type='number']::-webkit-inner-spin-button,input[type='number']::-webkit-outer-spin-button{height:auto}
+input[type='search']{-webkit-appearance:textfield;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type='search']::-webkit-search-cancel-button,input[type='search']::-webkit-search-decoration{-webkit-appearance:none}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
 legend{border:0;padding:0}
 textarea{overflow:auto}
 optgroup{font-weight:bold}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
-/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
+/*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */:root{-ms-overflow-style:-ms-autohiding-scrollbar;overflow-y:scroll;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
 audio:not([controls]){display:none}
 details{display:block}
 input[type="number"]{width:auto}
@@ -53,12 +62,12 @@ template{display:none}
 textarea{overflow:auto}
 [hidden]{display:none}
 [unselectable]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-*,::before,::after{box-sizing:inherit}
+*,::before,::after{-webkit-box-sizing:inherit;box-sizing:inherit}
 *{font-size:inherit;line-height:inherit}
 ::before,::after{text-decoration:inherit;vertical-align:inherit}
 *,::before,::after{border-style:solid;border-width:0}
 *{margin:0;padding:0}
-:root{box-sizing:border-box;cursor:default;font:16px/1.5 sans-serif;text-rendering:optimizeLegibility}
+:root{-webkit-box-sizing:border-box;box-sizing:border-box;cursor:default;font:16px/1.5 sans-serif;text-rendering:optimizeLegibility}
 html{background-color:#fff}
 a{text-decoration:none}
 audio,canvas,iframe,img,svg,video{vertical-align:middle}
@@ -74,7 +83,7 @@ table{border-collapse:collapse;border-spacing:0}
 textarea{resize:vertical}
 ::-moz-selection{background-color:#b3d4fc;text-shadow:none}
 ::selection{background-color:#b3d4fc;text-shadow:none}
-*,*:after,*:before{box-sizing:border-box;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility}
+*,*:after,*:before{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeLegibility}
 html{font-size:62.5%;height:100%;min-height:100%}
 body{font:400 11px/1.4 sans-serif;color:#292929;margin:0;background:#fff !important;height:100%;min-height:100%}
 .clear:before,.clear:after{content:' ';display:table}
@@ -95,7 +104,7 @@ a img.alignright{float:right;margin:5px 0 20px 20px}
 a img.alignnone{margin:5px 20px 20px 0}
 a img.alignleft{float:left;margin:5px 20px 20px 0}
 a img.aligncenter{display:block;margin-left:auto;margin-right:auto}
-.wp-caption{background:#c5c5c5;max-width:100%;padding:2rem;text-align:center}
+.wp-caption{background:#c5c4c4;max-width:100%;padding:2rem;text-align:center}
 .wp-caption.alignnone{margin:5px 20px 20px 0}
 .wp-caption.alignleft{margin:5px 20px 20px 0}
 .wp-caption.alignright{margin:5px 0 20px 20px}

@@ -1,8 +1,6 @@
 /**
- * Vendor JS 1
- *
- * A vendor JS script.
+ * Vendor JavaScript
  *
  * @since 1.0.0
  */
-console.log( 'VendorJS1' );
+const divide = (a, b) => a / b;
