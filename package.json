@@ -1,7 +1,7 @@
 {
-  "name": "your-project",
+  "name": "wpgulptheme",
   "version": "1.0.0",
-  "author": "Author Name (https://twitter.com/MrAhmadAwais/)",
+  "author": "Ahmad Awais (https://twitter.com/MrAhmadAwais/)",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.0.0",
