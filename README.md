@@ -20,6 +20,10 @@
 
 </div>
 
+1. Clone this demo theme `git clone https://github.com/ahmadawais/WPGulpTheme`
+2. Install WPGulp in it `npx wpgulp`
+3. All done!
+
 <br />
 <br />
 
