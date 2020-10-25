@@ -7,10 +7,9 @@
   <h1><code>WordPress Gulp Theme</code></h1>
 
 > A demo theme to showcase how to use WPGulp with WordPress.
+> ⚠️ Demo theme implementation for [WPGulp](https://github.com/ahmadawais/WPGulp). Use [WPGulp](https://github.com/ahmadawais/WPGulp) instead.
 
 </div>
-
-> ⚠️ Demo theme implementation for [WPGulp](https://github.com/ahmadawais/WPGulp). Use [WPGulp](https://github.com/ahmadawais/WPGulp) instead.
 
 <div align="center">
   <h2>WordPress Gulp Workflow</h2>
