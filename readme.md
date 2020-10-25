@@ -1,6 +1,9 @@
 <div align="center">
 
-  <small><p><em>📟 Learn to <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp" rel="nofollow">build CLI DevTools</a>, like WPGulp with me at <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp">NodeCLI.com</a>.</em></p></small>
+[![GitHub](https://img.shields.io/wordpress/v/akismet.svg?colorA=D14543&colorB=21759B&maxAge=2592000&style=flat&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
+[![emoji-log](https://img.shields.io/badge/🚀%20Emoji-Log-gray.svg?colorA=D14543&colorB=21759B&style=flat)](https://github.com/ahmadawais/Emoji-Log/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)  [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
+
+  <small><p><em>📟 Learn to <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulpTheme" rel="nofollow">build CLI DevTools</a>, like WPGulp with me at <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulpTheme">NodeCLI.com</a>.</em></p></small>
 
   <a href="https://github.com/AhmadAwais/WPGulp"><img src="https://on.awais.dev/Jrug8xgz" alt="WPGulp WordPress Gulp Theme" /></a>
 
@@ -10,13 +13,7 @@
 
 </div>
 
-<div align="center">
-  <h2>WordPress Gulp Workflow</h2>
-
-[![GitHub](https://img.shields.io/wordpress/v/akismet.svg?colorA=D14543&colorB=21759B&maxAge=2592000&style=flat&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
-[![emoji-log](https://img.shields.io/badge/🚀%20Emoji-Log-gray.svg?colorA=D14543&colorB=21759B&style=flat)](https://github.com/ahmadawais/Emoji-Log/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)  [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
-
-</div>
+## Get Started
 
 1. Clone this demo theme `git clone https://github.com/ahmadawais/WPGulpTheme`
 2. Install WPGulp in it `npx wpgulp`
@@ -65,4 +62,4 @@ _Follow me 👋 on Twitter for more updates and questions_
 
 [![Tweet to say Hi](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
 
-[n]: https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp
+[n]: https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulpTheme
