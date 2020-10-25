@@ -4,7 +4,7 @@
 
   <a href="https://github.com/AhmadAwais/WPGulp"><img src="https://on.awais.dev/Jrug8xgz" alt="WPGulp WordPress Gulp Theme" /></a>
 
-  <h1><code>WordPress Gulp Theme</code></h1>
+  <h1>WordPress Gulp Theme</h1>
 
 > A demo theme to showcase how to use WPGulp with WordPress. Use [WPGulp](https://github.com/ahmadawais/WPGulp) instead.
 
