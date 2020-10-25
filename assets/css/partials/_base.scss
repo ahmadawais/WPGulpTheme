@@ -1,43 +1,40 @@
-/**
- * Base SCSS
- */
-.wrap{
-	display: table;
+.wrap {
 	width: 100%;
-	height: 100%;
 	font-size: 5vh;
 	padding: 3vh;
-	background: $color--primary;
-	color: $w;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
-.content{
-	display: table-cell;
-	width: 100%;
-	vertical-align: middle;
-	margin: 0 auto;
-	text-align: center;
+a {
+	background: $blue;
+	color: $w;
+	padding: 0.25rem 1rem;
+	border-radius: 3px;
+	font-weight: bold;
+}
 
-	h1, p{
-		font-family: Lato;
+.content {
+	max-width: 500px;
+
+	h1,
+	p {
+		// font-family: Lato;
 		font-weight: 100;
-		@include r(240)  { font-weight: 100; }
-		@include r(320)  { font-weight: 100; }
-		@include r(480)  { font-weight: 100; }
-		@include r(768)  { font-weight: 100; }
-		@include r(1024) { font-weight: 100; }
-		@include r(1280) { font-weight: 100; }
-
 	}
 
-	h1{
+	h1 {
 		text-transform: uppercase;
-		@include r(240)  { text-transform: uppercase; }
-	    	@include r(320)  { text-transform: uppercase; }
-	    	@include r(480)  { text-transform: uppercase; }
-	    	@include r(768)  { text-transform: uppercase; }
-	    	@include r(1024) { text-transform: uppercase; }
-	    	@include r(1280) { text-transform: uppercase; }
 
+		a {
+			background: transparent;
+		}
+	}
+
+	small {
+		display: inline-block;
+		margin-top: 2rem;
 	}
 }

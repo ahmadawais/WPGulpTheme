@@ -5,13 +5,18 @@
  * Entire theme's function definitions.
  *
  * @since   1.0.0
- * @package WP
+ * @package WPGulp
  */
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+// Globals.
+define( 'MY_THEME_VER', '1.0.0' );
+define( 'MY_THEME_DIR', get_template_directory() );
+define( 'MY_THEME_URL', get_template_directory_uri() );
 
 /**
  * Scripts & Styles.
@@ -20,18 +25,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since  1.0.0
  */
-function wpgt_scripts() {
+function my_theme_styles_scripts() {
 	// Frontend scripts.
 	if ( ! is_admin() ) {
 		// Enqueue vendors first.
-		wp_enqueue_script( 'wpgt_vendorsJs', get_template_directory_uri() . '/assets/js/vendors.min.js' );
+		wp_enqueue_script( 'vendors', MY_THEME_URL . '/assets/js/vendors.min.js' );
 
 		// Enqueue custom JS after vendors.
-		wp_enqueue_script( 'wpgt_customJs', get_template_directory_uri() . '/assets/js/custom.min.js' );
+		wp_enqueue_script( 'custom', MY_THEME_URL . '/assets/js/custom.min.js' );
 
 		// Minified and Concatenated styles.
-		wp_enqueue_style( 'wpgt_style', get_template_directory_uri() . '/style.min.css', array(), '1.0', 'all' );
+		wp_enqueue_style( 'styles', MY_THEME_URL . '/style.min.css', array(), MY_THEME_VER, 'all' );
 	}
 }
-// Hook.
-add_action( 'wp_enqueue_scripts', 'wpgt_scripts' );
+
+add_action( 'wp_enqueue_scripts', 'my_theme_styles_scripts' );
